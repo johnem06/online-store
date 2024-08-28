@@ -1,62 +1,220 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: sans-serif;
+    background-color: rgb(239, 233, 233);
 }
 
-.menu {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    background-color: #333;
-    overflow: hidden;
+nav {
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    gap: 20vw;
 }
 
-.menu > li {
-    float: left;
-    position: relative;
+.navigation-buttons-section button {
+    background: none;
+    /* color: rgb(216, 134, 76); */
+    border: none;
+    font-size: 0.9em;
+    opacity: 0.9;
 }
 
-.menu > li > a {
-    display: block;
+button:hover{
+    cursor:pointer;
+    opacity: 0.8;
+}
+
+i:hover, a:hover{
+    cursor:pointer;
+    opacity: 0.8;
+}
+
+#button5:hover{
+    /* background-color: rgb(123, 52, 1);
+    box-shadow: 2px 2px 1px 1px rgb(238, 190, 156); */
+    height: 42px;
+    width:102px;
+    opacity:1;
+}
+
+.menu-toggle {
+    display: none; 
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    color: rgb(216, 134, 76);
+}
+
+#logo {
+    /* text-align:center; */
+}
+
+.cart-section button {
+    background-color: rgb(186, 104, 46);
+    border: none;
+    border-radius: 20px;
     color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+    width: 100px;
+    height: 40px;
 }
 
-.menu > li > a:hover {
-    background-color: #111;
-}
-
-.dropdown-content {
-    display: none;
+.general-content {
+    margin-top: 0;
     position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100vw;
 }
 
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
+.body-text {
+    margin-left: 20px;
+    width: 35vw;
+    margin-top: 100px;
+    height: 70%;
 }
 
-.dropdown-content a:hover {
-    background-color: #f1f1f1;
+.body-text p {
+    opacity: 0.7;
+    margin-bottom: 100px;
+    font-size: 15px;
 }
 
-.dropdown:hover .dropdown-content {
-    display: block;
+.body-text h2 {
+    opacity: 0.8;
+    font-weight: 100;
+    font-size: 40px;
+    margin-bottom: 10px;
+    
 }
-/* nav{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100vw;
-    background-color: white;
-    color:#111;
-} */
 
+.image-section {
+    width: 50vw;
+    margin-top: 40px;
+    height: 90%;
+    display: flex;
+}
+
+.image-section img{
+    border-radius: 7px;
+}
+
+.image-section p {
+    opacity: 0.5;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 15px;
+}
+
+.body-content {
+    display: flex;
+    height: 80%;
+    gap: 100px;
+}
+
+.image2 {
+    margin-top: 50px;
+}
+
+.image3 {
+    margin-top: 245px;
+}
+
+.image2, .image3 {
+    margin-left: 8px;
+}
+
+h1 {
+    font-family: Futura Bold Oblique, sans-serif;
+    font-style: oblique;
+    font-weight: 100;
+    color: rgb(216, 134, 76);
+    font-size: 100px;
+    margin-bottom: 10px;
+    /* margin-top: 40px; */
+}
+
+a {
+    color: rgb(216, 134, 76);
+}
+
+.icon {
+    font-size: 20px;
+    color: rgb(216, 134, 76);
+    transition: color 0.3s ease;
+}
+
+@media all and (max-width: 1300px) {
+    .navigation-buttons-section {
+        display: none; 
+        flex-direction: column; 
+        position: absolute;
+        background-color: white;
+        width: 100%;
+        top: 60px; 
+        left: 0;
+        padding: 20px;
+        /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+    }
+
+    .navigation-buttons-section.show {
+        /* display:flex; */
+        display:block;
+        background: none;
+    }
+
+    .menu-toggle {
+        display: block; 
+
+    nav {
+        justify-content: space-between; 
+        /* background-color: black; */
+    }
+    }
+}
+@media all and (max-width: 1000px) {
+    nav{
+        gap:10vw
+        /* gap:auto; */
+    }
+    .body-content {
+        display: block;
+    }
+    .image-section{
+        display:block;
+    }
+    .image3{
+        margin-top: 20px;
+    }
+    .body-text{
+        width:100%;
+    }
+}
+@media all and (max-width: 500px) {
+    nav{
+        gap:5vw;
+    }
+    #logo{
+        height: 50px;
+        width: 100px;
+    }
+    .image-section p {
+        font-size: 11.5px;
+        /* font-size: 4vw; */
+        margin-right: 0;
+    }
+}
+
+
+@media all and (min-width: 1310px) {
+    button::after {
+        content: "";
+        position: absolute;
+        bottom: -px; /* Adjust the position as needed */
+        left: 4%;
+        top:13.5%;
+        transform: translateX(-50%);
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background-color: rgb(216, 134, 76);
+    }
+}
