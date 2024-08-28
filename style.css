@@ -18,6 +18,14 @@ nav {
     opacity: 0.9;
 }
 
+.cart-section{
+    display: flex;
+    gap:20px;
+}
+.icon{
+    margin-top: 15px;
+}
+
 button:hover{
     cursor:pointer;
     opacity: 0.8;
